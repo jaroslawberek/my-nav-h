@@ -1,0 +1,15 @@
+// =====================================
+// Main SCSS entry point (7-1 architecture)
+// =====================================
+// 1. Abstracts
+@use "abstracts/variables" as *;
+@use "abstracts/mixins";
+@use "abstracts/placeholders";
+// 2. Base
+@use "base/reset";
+// 3. Layout
+@use "layout/header";
+@use "layout/footer";
+@use "layout/sidebar";
+// 4. Components.
+@use "components/menubar";

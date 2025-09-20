@@ -1,0 +1,224 @@
+$background-color: #f7f7f7;
+
+/* 🔹 Minimalny reset – przyjazny dla Bootstrapa */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; // bo i tak stylujesz listy sam w menubar
+}
+
+a {
+    text-decoration: none;
+    color: inherit; // linki biorą kolor z rodzica
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; // eliminuje dziwne odstępy pod obrazkiem
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    font: inherit;
+}
+
+%--link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: opacity 1s ease-in;
+    // border: 1px solid gray;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@mixin person-sceleton($direction, $align: center, $radius: 50%, $padding: 0, $width: 2rem, $height: 2rem) {
+    flex-direction: $direction;
+    text-align: $align;
+    height: auto;
+    >img {
+        border-radius: $radius;
+        padding: $padding;
+        width: $width;
+        height: $height;
+    }
+}
+
+
+/*
+
+*/
+
+header {
+    background-color: $background-color;
+    -webkit-box-shadow: -3px 13px 40px -28px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -3px 13px 40px -28px rgba(66, 68, 90, 1);
+    box-shadow: -3px 13px 40px -28px rgba(66, 68, 90, 1);
+    width: 100%;
+    height: fit-content;
+}
+
+.menubar {
+    min-height: 77px;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__person {
+        @extend %--link;
+        @include person-sceleton(column);
+        &--name {
+            font-weight: 900;
+            padding: 0;
+            margin: 0;
+        }
+        &--position {
+            font-style: italic;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__person-row {
+        @extend %--link;
+        @include person-sceleton(row);
+        .menubar__person-row__description {
+            margin-left: 10px;
+        }
+        &--name {
+            font-weight: 900;
+        }
+        &--position {
+            font-style: italic;
+        }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none; // wyłącza podkreślenie linku
+        padding-right: 16px; // odstęp od kolejnego elementu menu
+        padding-left: 8px; // trochę od krawędzi
+        img {
+            height: 40px; // wysokość dopasowana do paska (72px → 70% = ~40px)
+            width: auto; // zachowanie proporcji
+            max-width: 120px;
+            display: block;
+        }
+    }
+}
+
+
+/* 🔹 Responsywność: uproszczone logo na mobile */
+
+@media (max-width: 768px) {
+    .menubar__logo img {
+        height: 32px; // mniejsze logo na mobile
+    }
+}
+
+.menubar__nav {
+    display: flex;
+    list-style: none;
+    /* clas="menubar__nav menubar__nav--row" */
+    &--row {
+        gap: 15px;
+    }
+    /* clas="menubar__nav menubar__nav--column" */
+    &--column {
+        gap: 0; // albo po prostu bez gap
+    }
+    /* clas="menubar__nav menubar__nav--only-icon" */
+    &--only-icon {
+        gap: 10px;
+    }
+    /* W kolumnie: ikona a pod nia opis */
+    li {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        .badge {
+            font-size: 8px;
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            opacity: 1 !important;
+            z-index: 10;
+        }
+    }
+    &-link {
+        //czyli:  menubar__nav-link
+        &--column {
+            //czyli: class="menubar__nav-link menubar__nav-link--column"
+            @extend %--link;
+            opacity: 0.5;
+            flex-direction: column;
+            width: 74px;
+            height: 72px;
+            .menubar__icon {
+                font-size: 24px;
+            }
+            .menubar__caption {
+                margin-top: 0px;
+            }
+            &:hover {
+                opacity: 0.7;
+                color: rgb(30, 30, 240);
+            }
+        }
+        &--row {
+            //czyli: class="menubar__nav-link menubar__nav-link--column"
+            @extend %--link;
+            opacity: 0.5;
+            width: auto;
+            height: 72px;
+            .menubar__icon {
+                font-size: 24px;
+            }
+            .menubar__caption {
+                margin-left: 2px;
+            }
+        }
+        /* Sama ikona */
+        &--only-icon {
+            @extend %--link;
+            position: relative;
+            opacity: 0.5;
+            margin-right: 20px; //odległosc miedzy ikonami
+            width: 34px;
+            height: 72px;
+            .menubar__icon {
+                position: relative;
+                font-size: 24px;
+            }
+        }
+    }
+    &__divider {
+        width: 0;
+        border-right: 1px solid #e3e6f0;
+        height: 50px;
+        margin: auto;
+    }
+}

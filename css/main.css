@@ -1,5 +1,23 @@
-@charset "UTF-8";
-/* 🔹 Minimalny reset – przyjazny dla Bootstrapa */
+.menubar__person, .menubar__person-row, .menubar__nav-link--column, .menubar__nav-link--row, .menubar__nav-link--only-icon {
+  color: #000;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+.menubar__person:hover, .menubar__person-row:hover, .menubar__nav-link--column:hover, .menubar__nav-link--row:hover, .menubar__nav-link--only-icon:hover {
+  opacity: 1;
+}
+
 *,
 *::before,
 *::after {
@@ -38,29 +56,6 @@ button {
   font: inherit;
 }
 
-.menubar__nav-link--only-icon, .menubar__nav-link--row, .menubar__nav-link--column, .menubar__person-row, .menubar__person {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 12px;
-  -webkit-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
-}
-.menubar__nav-link--only-icon:hover, .menubar__nav-link--row:hover, .menubar__nav-link--column:hover, .menubar__person-row:hover, .menubar__person:hover {
-  opacity: 1;
-}
-
-/*
-
-*/
 header {
   background-color: #f7f7f7;
   -webkit-box-shadow: -3px 13px 40px -28px rgb(66, 68, 90);
@@ -71,9 +66,19 @@ header {
   height: fit-content;
 }
 
+.footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+}
+
 .menubar {
   min-height: 77px;
-  padding: 0px 50px;
+  padding: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,21 +154,11 @@ header {
   display: block;
 }
 
-/* 🔹 Responsywność: uproszczone logo na mobile */
-@media (max-width: 768px) {
-  .menubar__logo img {
-    height: 32px;
-  }
-}
 .menubar__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  /* clas="menubar__nav menubar__nav--row" */
-  /* clas="menubar__nav menubar__nav--column" */
-  /* clas="menubar__nav menubar__nav--only-icon" */
-  /* W kolumnie: ikona a pod nia opis */
 }
 .menubar__nav--row {
   gap: 15px;
@@ -196,9 +191,6 @@ header {
   opacity: 1 !important;
   z-index: 10;
 }
-.menubar__nav-link {
-  /* Sama ikona */
-}
 .menubar__nav-link--column {
   opacity: 0.5;
   -webkit-box-orient: vertical;
@@ -212,7 +204,7 @@ header {
   font-size: 24px;
 }
 .menubar__nav-link--column .menubar__caption {
-  margin-top: 0px;
+  margin-top: 0;
 }
 .menubar__nav-link--column:hover {
   opacity: 0.7;

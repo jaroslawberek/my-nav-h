@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+// ✍️ Typografia globalna
+body {
+    font-size: $font-size-base;
+    color: $color-secondary;
+    font-family: Arial, sans-serif;
+}

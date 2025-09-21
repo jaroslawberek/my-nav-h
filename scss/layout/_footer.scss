@@ -1,5 +1,10 @@
-// 🔹 Footer (pusty szkielet)
-.footer {
-  padding: 1rem;
-  text-align: center;
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+footer {
+    height: $footer-height;
+    background-color: $footer-bg;
+    color: $footer-text-color;
+    margin: 0;
+    padding: 0;
 }

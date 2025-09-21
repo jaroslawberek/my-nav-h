@@ -12,104 +12,77 @@
 </head>
 
 <body>
-    <div class="main d-flex mx-3">
-
-        <div class="w-100">
-            <header>
-                <nav class="menubar">
-                    <a class="menubar__logo">
-                        <img src="img/logo1.svg" alt="" class="img-fluid">
+    <div class="main d-flex">
+        <section class="sidebar">
+            <img src="img/logo2.svg" alt="" class="sidebar__logo2 img-fluid">
+            <ul class="sidebar__nav">
+                <li>
+                    <a href="#" class="sidebar__nav-link">
+                        <i class="sidebar__icon fas fa-bell fa-fw"></i>
+                        <span class="sidebar__caption">Link1</span>
                     </a>
-                    <ul class="menubar__nav menubar__nav--column">
+                </li>
+                <li>
+                    <a href="#" class="sidebar__nav-link sidebar__nav-link--submenu collapsed">
+                        <i class="sidebar__icon fas fa-bell fa-fw"></i>
+                        <span class="sidebar__caption">Submenu</span>
+                    </a>
+                    <ul class="sidebar__nav sidebar__nav--sub">
                         <li>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--column">
-                                <i class="menubar__icon bi bi-file-person"></i>
-                                <span class="menubar__caption">O nas</span>
+                            <a href="#" class="sidebar__nav-link">
+                                <i class="sidebar__icon fas fa-bell fa-fw"></i>
+                                <span class="sidebar__caption">Link1</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--column">
-                                <i class="menubar__icon bi bi-archive-fill"></i>
-                                <span class="menubar__caption">Kontakt</span>
-                            </a>
-                        </li>
-                        <li class="menubar__nav__divider"></li>
-                        <li>
-                            <a href="#" class="menubar__person">
-                                <img src="img/avatar1.png" alt="" class="img-fluid">
-                                <p class="menubar__person--name">Jarosław Berek</p>
-                                <p class="menubar__person--position">Technik</p>
+                            <a href="#" class="sidebar__nav-link">
+                                <i class="sidebar__icon fas fa-bell fa-fw"></i>
+                                <span class="sidebar__caption">Link1</span>
                             </a>
                         </li>
                     </ul>
-                </nav>
-            </header>
-
-            <p class="my-5"></p>
-            <header>
-                <nav class="menubar">
-                    <a class="menubar__logo">
-                        <img src="img/logo1.svg" alt="" class="img-fluid">
+                </li>
+                <li>
+                    <a href="#" class="sidebar__nav-link">
+                        <i class="sidebar__icon fas fa-bell fa-fw"></i>
+                        <span class="sidebar__caption">Link1</span>
                     </a>
-                    <ul class="menubar__nav menubar__nav--row">
-                        <li>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--row">
-                                <i class="menubar__icon bi bi-file-person"></i>
-                                <span class="menubar__caption">O nas</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--row">
-                                <i class="menubar__icon bi bi-archive-fill"></i>
-                                <span class="menubar__caption">Kontakt</span>
-                            </a>
-                        </li>
-                        <li class="menubar__nav__divider"></li>
-                        <li>
-                            <a href="#" class="menubar__person">
-                                <img src="img/avatar1.png" alt="" class="img-fluid">
-                                <p class="menubar__person--name">Jarosław Berek</p>
-                                <p class="menubar__person--position">Technik</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                </nav>
-            </header>
-
-            <p class="my-5"></p>
-            <header>
-                <nav class="menubar">
-                    <a class="menubar__logo">
-                        <img src="img/logo1.svg" alt="" class="img-fluid">
-                    </a>
-                    <ul class="menubar__nav menubar__nav--only-icon">
-                        <li>
-                            <span class="badge rounded-pill bg-danger">400+</span>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
-                                <i class="menubar__icon fas fa-bell fa-fw">  </i>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="badge rounded-pill bg-danger">20+</span>
-                            <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
-                                <i class="menubar__icon fas fa-envelope fa-fw"></i>
-                            </a>
-                        </li>
-                        <li class="menubar__nav__divider"></li>
-                        <li href="#" class="menubar__person-row">
-                            <img src="img/avatar1.png" alt="" class="img-fluid">
-                            <div class="menubar__person-row__description">
-                                <p class="menubar__person--name">Jarosław Berek</p>
-                                <p class="menubar__person--position">Technik</p>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-
-            </header>
-        </div>
+                </li>
+            </ul>
+        </section>
+        <header>
+            <nav class="menubar">
+                <a class="menubar__logo">
+                    <img src="img/logo1.svg" alt="" class="img-fluid">
+                </a>
+                <ul class="menubar__nav menubar__nav--only-icon">
+                    <li>
+                        <span class="badge rounded-pill bg-danger">400+</span>
+                        <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
+                            <i class="menubar__icon fas fa-bell fa-fw">  </i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="badge rounded-pill bg-danger">20+</span>
+                        <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
+                            <i class="menubar__icon fas fa-envelope fa-fw"></i>
+                        </a>
+                    </li>
+                    <li class="menubar__nav__divider"></li>
+                    <li href="#" class="menubar__person-row">
+                        <img src="img/avatar1.png" alt="" class="img-fluid">
+                        <div class="menubar__person-row__description">
+                            <p class="menubar__person--name">Jarosław Berek</p>
+                            <p class="menubar__person--position">Technik</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
+    <footer class="">
+        fother
+    </footer>
 </body>
 
 </html>

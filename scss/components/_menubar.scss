@@ -2,8 +2,8 @@
 @use "../abstracts/placeholders";
 @use "../abstracts/mixins";
 .menubar {
-    min-height: $navbar-height + 5px;
-    padding: 0 $navbar-padding-x;
+    min-height: $menubar-height + 5px;
+    padding: 0 $menubar-padding-x;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,9 +41,9 @@
         padding-right: 16px;
         padding-left: 8px;
         img {
-            height: $logo-height-desktop;
+            height: $menubar-logo-height-desktop;
             width: auto;
-            max-width: $logo-max-width;
+            max-width: $menubar-logo-max-width;
             display: block;
         }
     }
@@ -54,13 +54,13 @@
     display: flex;
     list-style: none;
     &--row {
-        gap: $gap-row;
+        gap: $menubar-link-gap-row;
     }
     &--column {
-        gap: $gap-column;
+        gap: $menubar-link-gap-column;
     }
     &--only-icon {
-        gap: $gap-icon;
+        gap: $menubar-link-gap-icons;
     }
     li {
         display: flex;
@@ -84,7 +84,7 @@
             opacity: 0.5;
             flex-direction: column;
             width: 74px;
-            height: $navbar-height;
+            height: $menubar-height;
             .menubar__icon {
                 font-size: $font-size-icon;
             }
@@ -100,7 +100,7 @@
             @extend %nav-link-base;
             opacity: 0.5;
             width: auto;
-            height: $navbar-height;
+            height: $menubar-height;
             .menubar__icon {
                 font-size: $font-size-icon;
             }
@@ -114,7 +114,7 @@
             opacity: 0.5;
             margin-right: 20px;
             width: 34px;
-            height: $navbar-height;
+            height: $menubar-height;
             .menubar__icon {
                 position: relative;
                 font-size: $font-size-icon;

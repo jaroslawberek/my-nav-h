@@ -1,5 +1,71 @@
-// 🔹 Sidebar (pusty szkielet)
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+/* */
+
 .sidebar {
-  width: 250px;
-  min-height: 100vh;
+    width: $sidebar-width;
+    min-height: calc(100vh - $footer-height);
+    background-color: $sidebar-bg;
+    color: $sidebar-text-color;
+    padding: 0;
+    margin: 0;
+    /*  */
+    &__logo2 {
+        width: 400px;
+        height: 100px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    /*  */
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 90px 0;
+        padding: 0 5px 0 16px;
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            position: relative;
+            // background-color: silver;
+            color: rgb(179, 168, 168);
+            /*  */
+            &:hover {
+                color: #fff;
+                background-color: #454343;
+                font-weight: 500;
+                transition: color 0.3s ease-in;
+                transition: background-color 0.3s ease-in;
+            }
+            &--submenu {
+                color: rgb(179, 168, 168);
+                &:after {
+                    position: absolute;
+                    left: calc(100% - 10px);
+                    width: 1rem;
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                }
+                &.collapsed::after {
+                    content: "\f105"; // fa-chevron-right
+                }
+                &:not(.collapsed)::after {
+                    content: "\f107"; // fa-chevron-right
+                }
+            }
+        }
+        &--sub {
+            padding: 15px 16px 10px 20px;
+            margin: 0px 0;
+        }
+    }
+    &__icon {
+        margin-right: 5px;
+    }
+    &__caption {
+        /*  */
+    }
 }

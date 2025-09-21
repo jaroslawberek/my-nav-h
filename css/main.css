@@ -56,6 +56,45 @@ button {
   font: inherit;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f7f7f7;
+  gap: 0;
+  padding: 0;
+  min-height: calc(100vh - 60px);
+}
+
+.page-left {
+  width: 250px;
+  background-color: #222;
+  color: #fff;
+}
+
+.page-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page-right header {
+  z-index: 3000;
+}
+.page-right .page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
 header {
   background-color: #f7f7f7;
   -webkit-box-shadow: -3px 13px 40px -28px rgb(66, 68, 90);
@@ -76,7 +115,7 @@ footer {
 
 /* */
 .sidebar {
-  width: 288px;
+  width: 250px;
   height: 100%;
   min-height: calc(100vh - 60px);
   background-color: #222;

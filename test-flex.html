@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo flex: grow shrink basis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h2 {
+            margin-top: 40px;
+        }
+        
+        .container {
+            display: flex;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            height: 120px;
+        }
+        
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+        }
+        /* Przykład 1: flex: 1 → każdy rośnie równo */
+        
+        .example1 .item {
+            flex: 1;
+        }
+        /* Przykład 2: flex: 0 0 200px → sztywne pudełka */
+        
+        .example2 .item {
+            flex: 0 0 200px;
+        }
+        /* Przykład 3: różne ustawienia */
+        
+        .example3 .item1 {
+            flex: 1;
+            /* zwykły */
+            background: steelblue;
+        }
+        
+        .example3 .item2 {
+            flex: 2 0 100px;
+            /* start 100px, rośnie 2x szybciej */
+            background: seagreen;
+        }
+        
+        .example3 .item3 {
+            flex: 0 0 150px;
+            /* sztywne */
+            background: tomato;
+        }
+        /* Kolorki i podpisy */
+        
+        .example1 .item {
+            background: royalblue;
+        }
+        
+        .example2 .item {
+            background: darkorange;
+        }
+        
+        .example3 .item1 {
+            background: steelblue;
+        }
+        
+        .example3 .item2 {
+            background: seagreen;
+        }
+        
+        .example3 .item3 {
+            background: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Demo: flex-grow, flex-shrink, flex-basis</h1>
+
+    <h2>Przykład 1: flex: 1 (czyli 1 1 0)</h2>
+    <div class="container example1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <p>👉 Każdy element rośnie równomiernie i dzieli przestrzeń po równo.</p>
+
+    <h2>Przykład 2: flex: 0 0 200px</h2>
+    <div class="container example2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <p>👉 Każdy element ma dokładnie 200px szerokości – bez względu na dostępne miejsce.</p>
+
+    <h2>Przykład 3: miks ustawień</h2>
+    <div class="container example3">
+        <div class="item item1">flex: 1</div>
+        <div class="item item2">flex: 2 1 100px</div>
+        <div class="item item3">flex: 0 0 150px</div>
+    </div>
+    <p>👉 Zielony startuje od 100px i rośnie 2x szybciej niż niebieski. Czerwony ma sztywne 150px.</p>
+</body>
+
+</html>

@@ -11,6 +11,20 @@ $font-size-base: 12px;
 $font-size-icon: 24px;
 $font-size-badge: 8px;
 // ===============================
+// 🔹 Layout: Main container
+// ===============================
+$main-bg: #f7f7f7;
+$main-padding: 0;
+$main-gap: 0;
+// ===============================
+// 🔹 Layout: Page split
+// ===============================
+$page-left-width: 250px; // sidebar width
+$page-right-flex: 1; // prawa kolumna zajmuje resztę
+$page-content-flex: 1; // conten tez ma wypelnic wolna przestrzen
+$page-content-padding: 1rem;
+$page-content-bg: #f8f9fa;
+// ===============================
 // 🔹 Layout: Header / Menubar
 // ===============================
 $menubar-height: 72px;
@@ -59,7 +73,7 @@ $menubar-box-shadow: -3px 13px 40px -28px rgba(66, 68, 90, 1);
 // ===============================
 // 🔹 Layout: Sidebar
 // ===============================
-$sidebar-width: 288px;
+$sidebar-width: $page-left-width;
 $sidebar-bg: #222;
 $sidebar-text-color: #fff;
 $sidebar-logo-height: 32px;

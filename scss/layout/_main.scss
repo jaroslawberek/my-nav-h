@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+@use "sass:map";
+.main {
+    display: flex;
+    background-color: $main-bg;
+    gap: $main-gap;
+    padding: $main-padding;
+    min-height: calc(100vh - #{$footer-height}); // miejsce na stopkę
+}
+
+.page-left {
+    width: $page-left-width;
+    background-color: $sidebar-bg; // już masz w variables
+    color: $sidebar-text-color;
+}
+
+.page-right {
+    flex: $page-right-flex;
+    display: flex;
+    flex-direction: column;
+    header {
+        z-index: map.get($z-indexes, "header");
+    }
+    .page-content {
+        flex: $page-content-flex;
+        padding: $page-content-padding;
+        background-color: $page-content-bg;
+    }
+}

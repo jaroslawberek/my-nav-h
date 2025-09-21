@@ -24,11 +24,26 @@ $menubar-link-gap-icons: 10px;
 // ===============================
 // 🔹 Z-indexes (mapa)
 // ===============================
-$z-indexes: ( "modal": 5000, "dropdown": 4000, "header": 3000, "sidebar": 2000, "footer": 1000, "default": 1, "below": -1);
+$z-indexes: (
+    "modal": 5000,
+    "dropdown": 4000,
+    "header": 3000,
+    "sidebar": 2000,
+    "footer": 1000,
+    "default": 1,
+    "below": -1
+);
 // ===============================
 // 🔹 Breakpoints (mapa)
 // ===============================
-$breakpoints: ( "xs": "(max-width: 575.98px)", "sm": "(min-width: 576px)", "md": "(min-width: 768px)", "lg": "(min-width: 992px)", "xl": "(min-width: 1200px)", "xxl": "(min-width: 1400px)");
+$breakpoints: (
+    "xs": "(max-width: 575.98px)",
+    "sm": "(min-width: 576px)",
+    "md": "(min-width: 768px)",
+    "lg": "(min-width: 992px)",
+    "xl": "(min-width: 1200px)",
+    "xxl": "(min-width: 1400px)"
+);
 // ===============================
 // 🔹 Layout: Header / Menubar
 // ===============================
@@ -49,6 +64,28 @@ $sidebar-bg: #222;
 $sidebar-text-color: #fff;
 $sidebar-logo-height: 32px;
 $sidebar-padding: 16px;
+//_nav
+$sidebar_nav-gap: 10px;
+$sidebar_nav-margin: 90px 0;
+$sidebar_nav-padding: 0 5px 0 16px;
+//_nav-sub
+$sidebar_nav-sub-padding: 15px 16px 10px 20px;
+$sidebar_nav-sub-margin: 0;
+$sidebar_nav-sub-icon-right: 5px;
+//_nav-sub-right
+$sidebar_nav-sub-right-margin: 0;
+$sidebar_nav-sub-right-padding: 5px 25px 10px 25px;
+$sidebar_nav-sub-right-background-color: $sidebar-bg;
+$sidebar_nav-sub-right-left: calc(100% + 6px);
+$sidebar_nav-sub-right-top: 3px;
+//_nav-link
+$sidebar_nav-link-color: rgb(179, 168, 168);
+$sidebar_nav-link-hover-color: #fff;
+$sidebar_nav-link-hover-weight: 500;
+$sidebar_nav-link-submenu-after-font-family: "Font Awesome 5 Free";
+$sidebar_nav-link-submenu-after-width: 1rem;
+$sidebar_nav-link-submenu-after-chevron-down: "\f105";
+$sidebar_nav-link-submenu-after-chevron-right: "\f107";
 // ===============================
 // 🔹 Layout: Footer
 // ===============================

@@ -1,0 +1,74 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+/* Boczne menu administracyjne */
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $sidebar_nav-gap;
+    margin: $sidebar_nav-margin;
+    padding: $sidebar_nav-padding;
+    li {
+        position: relative;
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        // background-color: silver;
+        color: $sidebar_nav-link-color;
+        /*  */
+        &:hover {
+            color: $sidebar_nav-link-hover-color;
+            background-color: $sidebar_nav-link-color;
+            font-weight: $sidebar_nav-link-hover-weight;
+            transition: color 0.3s ease-in;
+            transition: background-color 0.3s ease-in;
+        }
+        &--submenu {
+            color: rgb(179, 168, 168);
+            &:after {
+                position: absolute;
+                left: calc(100% - 10px);
+                width: $sidebar_nav-link-submenu-after-width;
+                font-weight: 900;
+                font-family: $sidebar_nav-link-submenu-after-font-family;
+            }
+            &.collapsed::after {
+                content: $sidebar_nav-link-submenu-after-chevron-down; // fa-chevron-right
+            }
+            &:not(.collapsed)::after {
+                content: $sidebar_nav-link-submenu-after-chevron-right; // fa-chevron-right
+            }
+        }
+    }
+    &--sub {
+        // podmenu wyskakuje rozwija sie normalnie pod submenu
+        padding: $sidebar_nav-sub-padding;
+        margin: $sidebar_nav-sub-margin;
+        &__icon {
+            margin-right: $sidebar_nav-sub-icon-right;
+        }
+        &__caption {
+            /*  */
+        }
+    }
+    &--sub-right {
+        // podmenu wyskakuje obok pozycji submenu
+        position: absolute;
+        margin: $sidebar_nav-sub-right-margin;
+        padding: $sidebar_nav-sub-right-padding;
+        background-color: $sidebar-bg;
+        left: $sidebar_nav-sub-right-left;
+        top: $sidebar_nav-sub-right-top;
+    }
+    &-icon {
+        margin-right: 5px;
+    }
+    &-caption {
+        /*  */
+    }
+}

@@ -91,67 +91,6 @@ footer {
   padding: 0;
   margin: 0 auto;
 }
-.sidebar__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  margin: 90px 0;
-  padding: 0 5px 0 16px;
-}
-.sidebar__nav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  position: relative;
-  color: rgb(179, 168, 168);
-  /*  */
-}
-.sidebar__nav-link:hover {
-  color: #fff;
-  background-color: #454343;
-  font-weight: 500;
-  -webkit-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-  -webkit-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
-}
-.sidebar__nav-link--submenu {
-  color: rgb(179, 168, 168);
-}
-.sidebar__nav-link--submenu:after {
-  position: absolute;
-  left: calc(100% - 10px);
-  width: 1rem;
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-}
-.sidebar__nav-link--submenu.collapsed::after {
-  content: "\f105";
-}
-.sidebar__nav-link--submenu:not(.collapsed)::after {
-  content: "\f107";
-}
-.sidebar__nav--sub {
-  padding: 15px 16px 10px 20px;
-  margin: 0px 0;
-}
-.sidebar__icon {
-  margin-right: 5px;
-}
-.sidebar__caption {
-  /*  */
-}
 
 .menubar {
   min-height: 77px;
@@ -314,4 +253,84 @@ footer {
   border-right: 1px solid #e3e6f0;
   height: 50px;
   margin: auto;
+}
+
+/* Boczne menu administracyjne */
+.sidebar__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin: 90px 0;
+  padding: 0 5px 0 16px;
+}
+.sidebar__nav li {
+  position: relative;
+}
+.sidebar__nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  color: rgb(179, 168, 168);
+  /*  */
+}
+.sidebar__nav-link:hover {
+  color: #fff;
+  background-color: rgb(179, 168, 168);
+  font-weight: 500;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.sidebar__nav-link--submenu {
+  color: rgb(179, 168, 168);
+}
+.sidebar__nav-link--submenu:after {
+  position: absolute;
+  left: calc(100% - 10px);
+  width: 1rem;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.sidebar__nav-link--submenu.collapsed::after {
+  content: "\f105";
+}
+.sidebar__nav-link--submenu:not(.collapsed)::after {
+  content: "\f107";
+}
+.sidebar__nav--sub {
+  padding: 15px 16px 10px 20px;
+  margin: 0;
+}
+.sidebar__nav--sub__icon {
+  margin-right: 5px;
+}
+.sidebar__nav--sub__caption {
+  /*  */
+}
+.sidebar__nav--sub-right {
+  position: absolute;
+  margin: 0;
+  padding: 5px 25px 10px 25px;
+  background-color: #222;
+  left: calc(100% + 6px);
+  top: 3px;
+}
+.sidebar__nav-icon {
+  margin-right: 5px;
+}
+.sidebar__nav-caption {
+  /*  */
 }

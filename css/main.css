@@ -10,7 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   -webkit-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
 }
@@ -57,9 +57,9 @@ button {
 }
 
 body {
-  font-size: 12px;
+  font-size: 16px;
   color: #6c757d;
-  font-family: Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
 }
 
 .main {
@@ -375,11 +375,11 @@ footer {
 }
 .sidebar__nav--sub-right {
   position: absolute;
-  margin: 0;
-  padding: 5px 25px 10px 25px;
+  margin: 0px;
+  padding: 5px 26px;
   background-color: #222;
-  left: calc(100% + 6px);
-  top: 3px;
+  left: calc(100% + 5px);
+  top: 1px;
 }
 .sidebar__nav-icon {
   margin-right: 5px;

@@ -7,9 +7,9 @@
 .sidebar__nav {
     display: flex;
     flex-direction: column;
-    gap: $sidebar_nav-gap;
-    margin: $sidebar_nav-margin;
-    padding: $sidebar_nav-padding;
+    gap: $sidebar-nav-gap;
+    margin: $sidebar-nav-margin;
+    padding: $sidebar-nav-padding;
     li {
         position: relative;
     }
@@ -19,12 +19,12 @@
         justify-content: start;
         position: relative;
         // background-color: silver;
-        color: $sidebar_nav-link-color;
+        color: $sidebar-nav-link-color;
         /*  */
         &:hover {
-            color: $sidebar_nav-link-hover-color;
-            background-color: $sidebar_nav-link-color;
-            font-weight: $sidebar_nav-link-hover-weight;
+            color: $sidebar-nav-link-hover-color;
+            background-color: $sidebar-nav-link-color;
+            font-weight: $sidebar-nav-link-hover-weight;
             transition: color 0.3s ease-in;
             transition: background-color 0.3s ease-in;
         }
@@ -33,24 +33,24 @@
             &:after {
                 position: absolute;
                 left: calc(100% - 10px);
-                width: $sidebar_nav-link-submenu-after-width;
+                width: $sidebar-nav-link-submenu-after-width;
                 font-weight: 900;
-                font-family: $sidebar_nav-link-submenu-after-font-family;
+                font-family: $sidebar-nav-link-submenu-after-font-family;
             }
             &.collapsed::after {
-                content: $sidebar_nav-link-submenu-after-chevron-down; // fa-chevron-right
+                content: $sidebar-nav-link-submenu-chevron-down; // fa-chevron-right
             }
             &:not(.collapsed)::after {
-                content: $sidebar_nav-link-submenu-after-chevron-right; // fa-chevron-right
+                content: $sidebar-nav-link-submenu-chevron-right; // fa-chevron-right
             }
         }
     }
     &--sub {
         // podmenu wyskakuje rozwija sie normalnie pod submenu
-        padding: $sidebar_nav-sub-padding;
-        margin: $sidebar_nav-sub-margin;
+        padding: $sidebar-nav-sub-padding;
+        margin: $sidebar-nav-sub-margin;
         &__icon {
-            margin-right: $sidebar_nav-sub-icon-right;
+            margin-right: $sidebar-nav-sub-icon-right;
         }
         &__caption {
             /*  */
@@ -59,11 +59,11 @@
     &--sub-right {
         // podmenu wyskakuje obok pozycji submenu
         position: absolute;
-        margin: $sidebar_nav-sub-right-margin;
-        padding: $sidebar_nav-sub-right-padding;
+        margin: 0px;
+        padding: 5px 26px;
         background-color: $sidebar-bg;
-        left: $sidebar_nav-sub-right-left;
-        top: $sidebar_nav-sub-right-top;
+        left: calc(100% + 5px);
+        top: 1px;
     }
     &-icon {
         margin-right: 5px;

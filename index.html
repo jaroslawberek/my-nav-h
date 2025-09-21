@@ -12,71 +12,82 @@
 </head>
 
 <body>
-    <div class="main d-flex">
-        <section class="sidebar">
-            <img src="img/logo2.svg" alt="" class="sidebar__logo2 img-fluid">
-            <ul class="sidebar__nav">
-                <li>
-                    <a href="#" class="sidebar__nav-link">
-                        <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
-                        <span class="sidebar__nav-caption">Link1</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="sidebar__nav-link sidebar__nav-link--submenu collapsed" data-bs-toggle="collapse" href="#collapseNavSub1" role="button" aria-expanded="false" aria-controls="collapseNavSub1">
-                        <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
-                        <span class="sidebar__nav-caption">Submenu</span>
-                    </a>
-                    <ul id="collapseNavSub1" class="collapse sidebar__nav sidebar__nav--sub ">
-                        <li>
-                            <a href="#" class="sidebar__nav-link">
-                                <span class="sidebar__nav-caption">Link1</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidebar__nav-link">
-                                <span class="sidebar__nav-caption">Link1</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__nav-link">
-                        <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
-                        <span class="sidebar__nav-caption">Link1</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <header>
-            <nav class="menubar">
-                <a class="menubar__logo">
-                    <img src="img/logo1.svg" alt="" class="img-fluid">
-                </a>
-                <ul class="menubar__nav menubar__nav--only-icon">
+    <div class="main d-flex bg-success" style="height: fit-content">
+        <section class="page-left">
+            <section class="sidebar">
+                <img src="img/logo2.svg" alt="" class="sidebar__logo2 img-fluid">
+                <ul class="sidebar__nav">
                     <li>
-                        <span class="badge rounded-pill bg-danger">400+</span>
-                        <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
-                            <i class="menubar__icon fas fa-bell fa-fw">  </i>
+                        <a href="#" class="sidebar__nav-link">
+                            <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
+                            <span class="sidebar__nav-caption">Link1</span>
                         </a>
                     </li>
                     <li>
-                        <span class="badge rounded-pill bg-danger">20+</span>
-                        <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
-                            <i class="menubar__icon fas fa-envelope fa-fw"></i>
+                        <a class="sidebar__nav-link sidebar__nav-link--submenu collapsed" data-bs-toggle="collapse" href="#collapseNavSub1" role="button" aria-expanded="false" aria-controls="collapseNavSub1">
+                            <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
+                            <span class="sidebar__nav-caption">Submenu</span>
                         </a>
+                        <ul id="collapseNavSub1" class="collapse sidebar__nav sidebar__nav--sub ">
+                            <li>
+                                <a href="#" class="sidebar__nav-link">
+                                    <span class="sidebar__nav-caption">Link1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidebar__nav-link">
+                                    <span class="sidebar__nav-caption">Link1</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="menubar__nav__divider"></li>
-                    <li href="#" class="menubar__person-row">
-                        <img src="img/avatar1.png" alt="" class="img-fluid">
-                        <div class="menubar__person-row__description">
-                            <p class="menubar__person--name">Jarosław Berek</p>
-                            <p class="menubar__person--position">Technik</p>
-                        </div>
+                    <li>
+                        <a href="#" class="sidebar__nav-link">
+                            <i class="sidebar__nav-icon fas fa-bell fa-fw"></i>
+                            <span class="sidebar__nav-caption">Link1</span>
+                        </a>
                     </li>
                 </ul>
-            </nav>
-        </header>
+            </section>
+        </section>
+
+        <section class="page-right w-100">
+            <header>
+                <nav class="menubar">
+                    <a class="menubar__logo">
+                        <img src="img/logo1.svg" alt="" class="img-fluid">
+                    </a>
+                    <ul class="menubar__nav menubar__nav--only-icon">
+                        <li>
+                            <span class="badge rounded-pill bg-danger">400+</span>
+                            <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
+                                <i class="menubar__icon fas fa-bell fa-fw">  </i>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="badge rounded-pill bg-danger">20+</span>
+                            <a href="#" class="menubar__nav-link menubar__nav-link--only-icon">
+                                <i class="menubar__icon fas fa-envelope fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="menubar__nav__divider"></li>
+                        <li href="#" class="menubar__person-row">
+                            <img src="img/avatar1.png" alt="" class="img-fluid">
+                            <div class="menubar__person-row__description">
+                                <p class="menubar__person--name">Jarosław Berek</p>
+                                <p class="menubar__person--position">Technik</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="page-content bg-secondary m-0 py-1 px-1">
+                Page content
+            </section>
+
+        </section>
+
+
     </div>
     <footer class="">
         fother

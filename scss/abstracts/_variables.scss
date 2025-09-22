@@ -49,15 +49,14 @@ $sidebar-bg: #222;
 $sidebar-text-color: #fff;
 $sidebar-logo-height: 32px;
 $sidebar-padding: 16px;
+// 🔹 Sidebar nav
 $sidebar-nav-gap: 12px;
 $sidebar-nav-margin: 90px 0 15px 0;
 $sidebar-nav-padding: 0 5px 0 16px;
 $sidebar-nav-sub-padding: 15px 16px 10px 20px;
 $sidebar-nav-sub-margin: 0;
 $sidebar-nav-sub-icon-right: 5px;
-$sidebar-nav-sub-right-padding: 5px 26px;
-$sidebar-nav-sub-right-left: calc(100% + 5px);
-$sidebar-nav-sub-right-top: 1px;
+// 🔹 Sidebar nav link
 $sidebar-nav-link-color: rgb(179, 168, 168);
 $sidebar-nav-link-hover-color: #fff;
 $sidebar-nav-link-hover-weight: 500;

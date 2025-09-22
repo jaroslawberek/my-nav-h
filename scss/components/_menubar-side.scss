@@ -62,10 +62,10 @@
         // podmenu wyskakuje obok pozycji submenu
         position: absolute;
         margin: $sidebar-nav-sub-margin;
-        padding: $sidebar-nav-sub-right-padding;
+        padding: 5px 26px;
         background-color: $sidebar-bg;
-        left: $sidebar-nav-sub-right-left;
-        top: $sidebar-nav-sub-right-top;
+        left: calc(100% + 5px);
+        top: 1px;
     }
     &-icon {
         margin-right: 5px;

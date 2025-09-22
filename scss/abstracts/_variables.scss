@@ -3,15 +3,16 @@
 // ===============================
 $color-bg-body: #f7f7f7;
 $color-text-base: #000;
-$color-secondary: #6c757d;
+$color-text-secondary: #6c757d;
 $color-text-muted: #666;
 $color-text-hover: rgb(30, 30, 240);
 $color-border-divider: #e3e6f0;
 // ===============================
 // 🔹 Typografia
 // ===============================
-$font-size-base: 16px; // spójna podstawa
-$font-size-small: 12px;
+$font-family-base: "Segoe UI", Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 12px;
 $font-size-icon: 24px;
 $font-size-badge: 8px;
 // ===============================
@@ -54,13 +55,16 @@ $sidebar-nav-padding: 0 5px 0 16px;
 $sidebar-nav-sub-padding: 15px 16px 10px 20px;
 $sidebar-nav-sub-margin: 0;
 $sidebar-nav-sub-icon-right: 5px;
+$sidebar-nav-sub-right-padding: 5px 26px;
+$sidebar-nav-sub-right-left: calc(100% + 5px);
+$sidebar-nav-sub-right-top: 1px;
 $sidebar-nav-link-color: rgb(179, 168, 168);
 $sidebar-nav-link-hover-color: #fff;
 $sidebar-nav-link-hover-weight: 500;
 $sidebar-nav-link-submenu-after-font-family: "Font Awesome 5 Free";
 $sidebar-nav-link-submenu-after-width: 1rem;
-$sidebar-nav-link-submenu-chevron-down: "\f105";
-$sidebar-nav-link-submenu-chevron-right: "\f107";
+$sidebar-nav-link-submenu-chevron-right: "\f105"; // fa-chevron-right
+$sidebar-nav-link-submenu-chevron-down: "\f107"; // fa-chevron-down
 // ===============================
 // 🔹 Footer
 // ===============================

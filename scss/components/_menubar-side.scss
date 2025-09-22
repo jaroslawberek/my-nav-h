@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/placeholders";
 @use "../abstracts/mixins";
+@use "sass:color";
 
 /* Boczne menu administracyjne */
 
@@ -23,13 +24,14 @@
         /*  */
         &:hover {
             color: $sidebar-nav-link-hover-color;
-            background-color: $sidebar-nav-link-color;
+            background-color: color.adjust($sidebar-bg, $lightness: -5%);
             font-weight: $sidebar-nav-link-hover-weight;
-            transition: color 0.3s ease-in;
-            transition: background-color 0.3s ease-in;
+            transition:
+                color 0.3s ease-in,
+                background-color 0.3s ease-in;
         }
         &--submenu {
-            color: rgb(179, 168, 168);
+            color: $sidebar-nav-link-color;
             &:after {
                 position: absolute;
                 left: calc(100% - 10px);
@@ -59,16 +61,15 @@
     &--sub-right {
         // podmenu wyskakuje obok pozycji submenu
         position: absolute;
-        margin: 0px;
-        padding: 5px 26px;
+        margin: $sidebar-nav-sub-margin;
+        padding: $sidebar-nav-sub-right-padding;
         background-color: $sidebar-bg;
-        left: calc(100% + 5px);
-        top: 1px;
+        left: $sidebar-nav-sub-right-left;
+        top: $sidebar-nav-sub-right-top;
     }
     &-icon {
         margin-right: 5px;
     }
     &-caption {
-        /*  */
     }
 }

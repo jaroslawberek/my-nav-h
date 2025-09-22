@@ -59,7 +59,25 @@ button {
 body {
   font-size: 16px;
   color: #6c757d;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+}
+
+.small {
+  font-size: 12px;
+  color: #666;
 }
 
 .main {
@@ -340,12 +358,10 @@ footer {
 }
 .sidebar__nav-link:hover {
   color: #fff;
-  background-color: rgb(179, 168, 168);
+  background-color: rgb(21.25, 21.25, 21.25);
   font-weight: 500;
-  -webkit-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-  -webkit-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in, background-color 0.3s ease-in;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
 }
 .sidebar__nav-link--submenu {
   color: rgb(179, 168, 168);
@@ -358,10 +374,10 @@ footer {
   font-family: "Font Awesome 5 Free";
 }
 .sidebar__nav-link--submenu.collapsed::after {
-  content: "\f105";
+  content: "\f107";
 }
 .sidebar__nav-link--submenu:not(.collapsed)::after {
-  content: "\f107";
+  content: "\f105";
 }
 .sidebar__nav--sub {
   padding: 15px 16px 10px 20px;
@@ -375,7 +391,7 @@ footer {
 }
 .sidebar__nav--sub-right {
   position: absolute;
-  margin: 0px;
+  margin: 0;
   padding: 5px 26px;
   background-color: #222;
   left: calc(100% + 5px);
@@ -384,10 +400,6 @@ footer {
 .sidebar__nav-icon {
   margin-right: 5px;
 }
-.sidebar__nav-caption {
-  /*  */
-}
-
 .card {
   background: white;
   border: 1px solid #ddd;
